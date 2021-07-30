@@ -1,0 +1,16 @@
+.card {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.card__img {
+  position: absolute;
+  max-height: 500px;
+}
+
+.card__img--back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+/*# sourceMappingURL=cards.css.map */

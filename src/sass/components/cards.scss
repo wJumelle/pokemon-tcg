@@ -1,0 +1,13 @@
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.card__img {
+    position: absolute;
+    max-height: 500px;
+}
+
+.card__img--back {
+    transform: rotateY(180deg);
+}

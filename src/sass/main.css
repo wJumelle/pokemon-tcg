@@ -1,0 +1,43 @@
+/* Base */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+html {
+  font-size: 1.6rem;
+}
+
+body {
+  padding: 2rem;
+}
+
+/* Components */
+.card {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.card__img {
+  position: absolute;
+  max-height: 500px;
+}
+
+.card__img--back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+/*# sourceMappingURL=main.css.map */
