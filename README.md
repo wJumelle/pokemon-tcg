@@ -1,6 +1,6 @@
 # ✨ Pokemon TCG ✨
 
-***Objectif du projet : création d'une application d'ouverture de booster Pokemon, avec visualisation des cartes à l'ouvertures et ajout dans une collection personnelle.***
+***Objectif du projet : création d'une application d'ouverture de boosters Pokemon des séries récentes, avec visualisation des cartes à l'ouverture et ajout dans une collection personnelle.***
 
 **Outils ciblés :**
 1. API de données Pokemon
@@ -9,5 +9,5 @@
 Optionnelle : webpack
 
 **Ressources :**
-1. API : pokemontcg.io
+1. API : [**pokemontcg.io**](https://dev.pokemontcg.io/)
 2. Base de données des photos ([**malie.io**](https://malie.io/static/listings.html))
