@@ -4,13 +4,59 @@
           transform-style: preserve-3d;
 }
 
-.card__img {
+.card > div {
   position: absolute;
-  max-height: 500px;
+  width: 100%;
+  height: 100%;
 }
 
-.card__img--back {
+.card .card__img {
+  max-height: 500px;
+  border-radius: 20px;
+}
+
+.card .card__img--back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+.card.card--clicked {
+  z-index: 100;
+  -webkit-animation: cardFullView 2s ease-in-out forwards;
+          animation: cardFullView 2s ease-in-out forwards;
+}
+
+@-webkit-keyframes cardFullView {
+  from {
+    position: relative;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0%) rotateY(0);
+            transform: translate(0%) rotateY(0);
+  }
+  to {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%) rotateY(720deg);
+            transform: translate(-50%) rotateY(720deg);
+  }
+}
+
+@keyframes cardFullView {
+  from {
+    position: relative;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0%) rotateY(0);
+            transform: translate(0%) rotateY(0);
+  }
+  to {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%) rotateY(720deg);
+            transform: translate(-50%) rotateY(720deg);
+  }
 }
 /*# sourceMappingURL=cards.css.map */
