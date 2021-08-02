@@ -1,6 +1,9 @@
+/* Utils */
+@import "utils/_variables.scss";
+
 /* Base */
-@import "base/reset.scss";
-@import "base/base.scss";
+@import "base/_reset.scss";
+@import "base/_base.scss";
 
 /* Components */
-@import "components/cards.scss";
+@import "components/_cards.scss";
