@@ -3,6 +3,8 @@
  = Si on laisse l'application de l'effet sur .card on perd le positionnement des autres cartes car .card devient position fixed
  */
 
+import { localToGlobal as getPosition } from './localToGlobal.js';
+
 window.onload = () => {
     // Variables
     const cards = document.querySelectorAll('.card');
@@ -25,7 +27,7 @@ window.onload = () => {
 // Fonctions
 // Animation de la carte au click
 function handleCardClick() {
-    const cardPos = localToGlobal(this);
+    const cardPos = getPosition(this);
     
     this.style.position = 'fixed';
     this.style.top = cardPos.top + 'px';
@@ -55,34 +57,4 @@ function handleCardReturnToInitialPos() {
         this.removeEventListener('click', handleCardReturnToInitialPos);
         this.addEventListener('click', handleCardClick);
     }, 2000);
-}
-
-// Récupération de la position d'un élément par rapport au viewport
-function localToGlobal( _el ) {
-    var target = _el,
-    target_width = target.offsetWidth,
-    target_height = target.offsetHeight,
-    target_left = target.offsetLeft,
-    target_top = target.offsetTop,
-    gleft = 0,
-    gtop = 0,
-    rect = {};
-
-    var moonwalk = function( _parent ) {
-        if (!!_parent) {
-            gleft += _parent.offsetLeft;
-            gtop += _parent.offsetTop;
-            moonwalk( _parent.offsetParent );
-        } else {
-            return rect = {
-            top: target.offsetTop + gtop,
-            left: target.offsetLeft + gleft,
-            bottom: (target.offsetTop + gtop) + target_height,
-            right: (target.offsetLeft + gleft) + target_width
-            };
-        }
-    }
-
-    moonwalk( target.offsetParent );
-    return rect;
 }
